@@ -1,14 +1,11 @@
 @echo off
-rem Title for the window
 title Password Generator by cray
 
-rem Set color
 color 0a
 
-rem Clear the screen
 cls
 
-rem ASCII Art for "cray"
+rem
 echo.
 echo   .o88b.  d8888b.   .d8b.   Y8b   d8P
 echo  d8P  Y8  88  `8D  d8' `8b   `88b d88'
@@ -23,10 +20,8 @@ echo.
 echo.
 
 :start_generation
-rem
 setlocal enabledelayedexpansion
 
-rem
 set "LOWERCASE=abcdefghijklmnopqrstuvwxyz"
 set "UPPERCASE=ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 set "NUMBERS=0123456789"
@@ -35,7 +30,6 @@ set "SPECIALS=#$*_-.,?@+!&|\=[]{}()'`~"
 set "CHARSET="
 set "CHARSET_LEN=0"
 
-rem
 :getLower
 set "use_lower="
 set /p "use_lower=Include lowercase letters (a-z)? [Y/N]: "
@@ -86,19 +80,16 @@ if /i "!use_specials!"=="Y" (
 
 echo.
 
-rem Check if any character set was selected
 if !CHARSET_LEN! equ 0 (
     echo You must select at least one character set to generate a password.
     echo.
     goto end
 )
 
-rem --- User Input for Password Length ---
 :getLength
 set "pass_len="
 set /p "pass_len=Enter the desired password length (e.g., 12): "
 
-rem Validate if input is a number and is valid
 set /a num_check=0
 set /a num_check=%pass_len% 2>nul
 if !num_check! equ 0 (
@@ -114,7 +105,6 @@ echo.
 echo Generating your password...
 echo.
 
-rem --- Password Generation ---
 set "password="
 for /l %%i in (1,1,%pass_len%) do (
     set /a "rand_num=!RANDOM! %% !CHARSET_LEN!"
@@ -122,7 +112,6 @@ for /l %%i in (1,1,%pass_len%) do (
     set "password=!password!!char!"
 )
 
-rem
 echo =======================================================
 echo  Your randomly generated password is:
 echo.
@@ -149,6 +138,5 @@ if errorlevel 1 (
 )
 
 :end
-rem End local environment and pause
 endlocal
 pause
