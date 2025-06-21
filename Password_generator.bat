@@ -23,10 +23,10 @@ echo.
 echo.
 
 :start_generation
-rem Enable delayed expansion for variable handling in loops
+rem
 setlocal enabledelayedexpansion
 
-rem --- Character Sets Definition ---
+rem
 set "LOWERCASE=abcdefghijklmnopqrstuvwxyz"
 set "UPPERCASE=ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 set "NUMBERS=0123456789"
