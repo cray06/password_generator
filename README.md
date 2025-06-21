@@ -1,4 +1,4 @@
-# Password Generator by Cray
+# Password Generator
 
 This is a simple but powerful password generator written in a batch script. It allows you to create strong, random passwords directly from the Windows command line. The script is interactive and easy to use, making it perfect for quickly generating secure passwords for your online accounts.
 
@@ -26,7 +26,7 @@ This is a simple but powerful password generator written in a batch script. It a
 
 ---
 
-# Générateur de Mot de Passe par Cray
+# Générateur de Mot de Passe
 
 Il s'agit d'un générateur de mots de passe simple mais puissant, écrit en script batch. Il vous permet de créer des mots de passe forts et aléatoires directement depuis la ligne de commande Windows. Le script est interactif et facile à utiliser, ce qui le rend parfait pour générer rapidement des mots de passe sécurisés pour vos comptes en ligne.
 
